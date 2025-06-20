@@ -1,672 +1,89 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIアポブースト | AIで営業をスマートに、成果を最大化</title>
-    <meta name="description" content="AIアポブーストは、550万社以上の企業データベースとAI分析で、B2B営業の成果を劇的に向上させる次世代型セールスツールです。今なら初期費用0円、月額10万円から。">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-    <link rel="stylesheet" href="css/styles-optimized.css">
-    <!-- Font optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Critical font styles inline -->
-    <style>
-        /* Font face declarations for immediate loading */
-        @font-face {
-            font-family: 'Noto Sans JP';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url('https://fonts.gstatic.com/s/notosansjp/v52/nKKF-GM_FYFRJvXzVXaAPe97MBmnOSt0qx.woff2') format('woff2');
-            unicode-range: U+3041-3096, U+309D-309F, U+30A1-30FA, U+30FC-30FE, U+4E00-9FAF;
-        }
-        @font-face {
-            font-family: 'Noto Sans JP';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url('https://fonts.gstatic.com/s/notosansjp/v52/nKKU-GM_FYFRJvXzVXaAPe9pdP6YydY.woff2') format('woff2');
-            unicode-range: U+3041-3096, U+309D-309F, U+30A1-30FA, U+30FC-30FE, U+4E00-9FAF;
-        }
-        @font-face {
-            font-family: 'Noto Sans JP';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url('https://fonts.gstatic.com/s/notosansjp/v52/nKKU-GM_FYFRJvXzVXaAPe9pdP6YydY.woff2') format('woff2');
-            unicode-range: U+3041-3096, U+309D-309F, U+30A1-30FA, U+30FC-30FE, U+4E00-9FAF;
-        }
-        
-        /* Fallback font stack */
-        body {
-            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
-        }
-        
-        /* Prevent layout shift during font load */
-        .font-loading {
-            visibility: hidden;
-        }
-        
-        .fonts-loaded .font-loading {
-            visibility: visible;
-        }
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.9.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.9.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
     </style>
-    
-    <!-- Async load full font stylesheet -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"></noscript>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Google Calendar Appointment Scheduling -->
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
     <script>
-    (function() {
-        var target = document.currentScript;
-        window.addEventListener('load', function() {
-            calendar.schedulingButton.load({
-                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true',
-                color: '#039BE5',
-                label: '予約を作成',
-                target,
-            });
-        });
-    })();
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
     </script>
-</head>
-<body class="antialiased">
-
-    <header class="sticky top-0 z-40" style="background-color: #AA4CD7;">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="flex-shrink-0">
-                <img src="images/logo.png" alt="AIアポブースト ロゴ" class="h-10">
-            </a>
-            <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#features" class="text-white hover:text-gray-200 transition">機能</a>
-                <a href="#comparison" class="text-white hover:text-gray-200 transition">他社比較</a>
-                <a href="#pricing" class="text-white hover:text-gray-200 transition">料金</a>
-                <a href="#faq" class="text-white hover:text-gray-200 transition">FAQ</a>
-            </nav>
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="#contact" class="text-sm font-bold text-white gradient-bg cta-button px-6 py-3 rounded-lg transition sparkle-animation">資料請求</a>
-                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="text-sm font-bold text-white gradient-bg cta-button px-6 py-3 rounded-lg transition sparkle-animation">30分デモ予約</a>
-            </div>
-            <button id="mobile-menu-button" class="lg:hidden relative z-50 h-8 w-8 text-white focus:outline-none" aria-label="メニューを開く" aria-controls="mobile-menu" aria-expanded="false">
-                <span class="sr-only">メニューを開閉する</span>
-                <span class="block absolute h-0.5 w-full bg-current transform transition duration-500 ease-in-out top-1.5"></span>
-                <span class="block absolute h-0.5 w-full bg-current transform transition duration-500 ease-in-out"></span>
-                <span class="block absolute h-0.5 w-full bg-current transform transition duration-500 ease-in-out bottom-1.5"></span>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-purple-400" style="background-color: #AA4CD7;">
-            <div class="px-6 py-4 flex flex-col space-y-4">
-                <a href="#features" class="text-white hover:text-gray-200 transition">機能</a>
-                <a href="#comparison" class="text-white hover:text-gray-200 transition">他社比較</a>
-                <a href="#pricing" class="text-white hover:text-gray-200 transition">料金</a>
-                <a href="#faq" class="text-white hover:text-gray-200 transition">FAQ</a>
-                <div class="flex flex-col space-y-3 pt-4">
-                    <a href="#contact" class="w-full text-center font-bold text-white gradient-bg cta-button px-4 py-2 rounded-lg sparkle-animation">資料請求</a>
-                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full text-center font-bold text-white gradient-bg cta-button px-4 py-2 rounded-lg sparkle-animation">30分デモ予約</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="relative bg-white pt-20 pb-24 lg:pt-32 lg:pb-36 text-center overflow-hidden">
-             <div class="absolute inset-0 hero-gradient-animated opacity-10"></div>
-             <div class="hero-section-overlay"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-800 leading-tight">
-                    <span class="block fade-in-left">営業をもっと、</span>
-                    <span class="block fade-in-right" style="animation-delay: 0.3s;">
-                        <span class="gradient-text animated-gradient-text">AIでスマートに</span>
-                    </span>
-                </h1>
-                <p class="mt-6 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 fade-in-up" style="animation-delay: 0.8s;">
-                    AIアポブーストが、B2B営業の非効率を解消<br>
-                    ターゲット選定からアプローチまでを自動化<br>
-                    あなたのチームを『売れる組織』へと変革
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 fade-in-up" style="animation-delay: 1.6s;">
-                    <a href="#contact" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-4 py-2 rounded-lg flex items-center justify-center gap-2 sparkle-animation">
-                        <i data-lucide="file-text" class="w-5 h-5 sm:w-6 sm:h-6"></i>
-                        資料請求はこちら
-                    </a>
-                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-4 py-2 rounded-lg flex items-center justify-center gap-2 sparkle-animation">
-                        <i data-lucide="calendar-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
-                        30分デモ予約
-                    </a>
-                </div>
-                <p class="mt-8 text-sm text-gray-500 fade-in-up" style="animation-delay: 2.4s;">初期費用0円・12ヶ月契約</p>
-                
-                <!-- Marquee Section -->
-                <div class="mt-16 marquee-container overflow-hidden relative w-full cursor-grab fade-in-up" style="animation-delay: 3.4s;">
-                    <div class="marquee-content flex gap-8">
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
-                            <i data-lucide="database" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">550万社 企業データ</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
-                            <i data-lucide="trending-up" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">120万社 リアルタイム求人データ</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
-                            <i data-lucide="target" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">決裁者 ダイレクトサーチ</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
-                            <i data-lucide="mail-check" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI パーソナライズドメール</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
-                            <i data-lucide="brain-circuit" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI 企業分析</h3>
-                        </a>
-                        <!-- Duplicate for seamless loop -->
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
-                            <i data-lucide="database" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">550万社 企業データ</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
-                            <i data-lucide="trending-up" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">120万社 リアルタイム求人データ</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
-                            <i data-lucide="target" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">決裁者 ダイレクトサーチ</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
-                            <i data-lucide="mail-check" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI パーソナライズドメール</h3>
-                        </a>
-                        <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
-                            <i data-lucide="brain-circuit" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI 企業分析</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 lg:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">こんな課題、<br class="block">ありませんか？</h2>
-                    <p class="mt-4 text-gray-600">B2B営業に潜む、見えないコストと機会損失。</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm problem-card" style="animation-delay: 0.1s;">
-                        <i data-lucide="list-x" class="mx-auto w-12 h-12 text-[#B22EE7] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">リスト作成に疲弊</h3>
-                        <p class="text-gray-600 text-sm md:text-base">企業リストの作成と精査に膨大な時間がかかり、営業活動を圧迫している。</p>
-                    </div>
-                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm problem-card" style="animation-delay: 0.2s;">
-                        <i data-lucide="user-x" class="mx-auto w-12 h-12 text-[#B22EE7] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">担当者に繋がらない</h3>
-                        <p class="text-gray-600 text-sm md:text-base">代表電話にかけても受付でブロックされ、キーパーソンにたどり着けない。</p>
-                    </div>
-                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm problem-card" style="animation-delay: 0.3s;">
-                        <i data-lucide="mail-warning" class="mx-auto w-12 h-12 text-[#B22EE7] mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">メールが読まれない</h3>
-                        <p class="text-gray-600 text-sm md:text-base">一斉送信の営業メールは開封されず、返信率は1%未満。効果が見えない。</p>
-                    </div>
-                </div>
-
-                <div id="solution-section" class="text-center mt-16">
-                    <i data-lucide="chevrons-down" class="w-16 h-16 text-gray-300 mx-auto animate-bounce"></i>
-                    <h2 class="mt-8 text-3xl lg:text-4xl font-bold text-gray-800">
-                        <span class="gradient-text">その全てを解決</span>
-                    </h2>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="features" class="py-16 lg:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <p class="text-[#7E4BC3] font-bold">AI POWERED SALES</p>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mt-2">成果に直結する、AI営業のコア機能</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">アポ獲得率を最大化するために設計された、独自の機能群をご覧ください。</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div id="feature-database" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
-                        <div class="gradient-bg w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="database" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">550万社超の企業データベース</h3>
-                        <p class="text-gray-600 text-sm md:text-base">日本全国の90%以上をカバーする膨大なデータベースにいつでもアクセス可能。業種、地域、規模で自由に絞り込めます。</p>
-                    </div>
-                    <div id="feature-recruitment" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
-                        <div class="gradient-bg w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">リアルタイム求人データ</h3>
-                        <p class="text-gray-600 text-sm md:text-base">採用活動中の"ニーズが顕在化している企業"をAIが特定。最新の120万社超の求人データからターゲット選定とリスト作成ができます。</p>
-                    </div>
-                    <div id="feature-search" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
-                        <div class="gradient-bg w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="target" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">決裁者ダイレクトサーチ</h3>
-                        <p class="text-gray-600 text-sm md:text-base">大企業でも、部署単位のキーパーソンや役員をピンポイントで検索。アポ獲得への最短ルートを開きます。</p>
-                    </div>
-                    <div id="feature-mail" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
-                        <div class="gradient-bg w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="mail-check" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">AIパーソナライズドメール</h3>
-                        <p class="text-gray-600 text-sm md:text-base">相手の役職や事業内容に合わせて、AIが最適なメール文面を自動生成。開封・クリック追跡も可能です。</p>
-                    </div>
-                    <div id="feature-data-enrichment" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
-                        <div class="gradient-bg w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="upload-cloud" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">手持ちの顧客データの<br>補完・リッチ化</h3>
-                        <p class="text-gray-600 text-sm md:text-base">お手持ちの顧客リストをアップロードするだけで、最新の企業情報やキーパーソン情報をAIが自動で補完・リッチ化します。</p>
-                    </div>
-                    <div id="feature-analysis" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
-                        <div class="gradient-bg w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="brain-circuit" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">AIが瞬時に企業分析</h3>
-                        <p class="text-gray-600 text-sm md:text-base">商談前に企業サイトをAIが瞬時に分析。事業内容、強み、最新ニュースなど10項目を30秒以内で要約し、準備工数を削減します。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="py-16 lg:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800"><span class="gradient-text">数字でわかる</span>効果</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">AIアポブーストがもたらす、圧倒的なパフォーマンス向上。</p>
-                    <img id="pc-image" src="images/PC.svg" alt="AIアポブースト ダッシュボード" class="mt-8 mx-auto max-w-full md:max-w-3xl h-auto fade-in-up cursor-pointer" style="animation-delay: 0.5s;">
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
-                        <p class="text-lg text-gray-600">メール・電話・HPの有効性</p>
-                        <p class="gradient-text text-6xl lg:text-7xl my-2 counter-value" data-target="95">0</p>
-                        <p class="text-2xl font-bold text-gray-800">%以上</p>
-                        <p class="font-bold text-xl mt-2">高いデータ精度</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
-                        <p class="text-lg text-gray-600">リスト作成・リサーチ</p>
-                        <p class="gradient-text text-6xl lg:text-7xl my-2"><span class="font-black">1</span><span class="text-4xl text-gray-800">/</span><span class="counter-value" data-target="10">0</span></p>
-                        <p class="text-2xl font-bold text-gray-800">に</p>
-                        <p class="font-bold text-xl mt-2">作業工数を圧縮</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
-                        <p class="text-lg text-gray-600">日次データ更新数</p>
-                        <p class="gradient-text text-6xl lg:text-7xl my-2"><span class="counter-value" data-target="100">0</span><span class="text-4xl">万</span></p>
-                        <p class="text-2xl font-bold text-gray-800">件以上</p>
-                        <p class="font-bold text-xl mt-2">常に最新の情報</p>
-                    </div>
-                </div>
-                 <div class="mt-12 text-center">
-                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-6 py-3 sm:px-8 sm:py-4 rounded-lg inline-flex items-center gap-2 sparkle-animation">
-                        <i data-lucide="trending-up" class="w-5 h-5 sm:w-6 sm:h-6"></i>
-                        30分デモ予約
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="comparison" class="py-16 lg:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800"><span class="gradient-text">選ばれる理由</span></h2>
-                    <p class="mt-4 max-w-3xl mx-auto text-gray-600">高機能・高品質は当たり前。<br>圧倒的なコストパフォーマンスと、営業成果にコミットする機能性で選ばれています。</p>
-                </div>
-                <div class="comparison-table overflow-x-auto bg-white rounded-2xl border">
-                    <table class="w-full min-w-[700px] text-center">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-2 pr-0 py-2 sm:px-3 sm:py-3 md:px-6 md:py-6 font-bold text-sm md:text-base text-center">比較項目</th>
-                                <th class="p-2 sm:p-3 md:p-6 font-bold text-sm md:text-base border-l gradient-bg text-white">
-                                    AIアポブースト
-                                </th>
-                                <th class="p-2 sm:p-3 md:p-6 font-bold text-sm md:text-base text-gray-600 border-l">A社</th>
-                                <th class="p-2 sm:p-3 md:p-6 font-bold text-sm md:text-base text-gray-600 border-l">B社</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 divide-y">
-                            <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base align-middle">月額料金</td>
-                                <td class="p-2 sm:p-3 md:p-5 font-bold text-[#7E4BC3] text-sm md:text-base price-animation-target align-middle" data-price-value="100000"><span style="transform: translateY(5px); display: inline-block;">¥100,000~</span></td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base align-middle"><span style="transform: translateY(5px); display: inline-block;">¥620,000~</span></td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base align-middle"><span style="transform: translateY(5px); display: inline-block;">¥400,000~</span></td>
-                            </tr>
-                             <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base align-middle">初期費用</td>
-                                <td class="p-2 sm:p-3 md:p-5 font-bold text-[#7E4BC3] text-sm md:text-base price-animation-target align-middle" data-price-value="0"><span style="transform: translateY(5px); display: inline-block;">0円</span></td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base align-middle"><span style="transform: translateY(5px); display: inline-block;">¥400,000</span></td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base align-middle"><span style="transform: translateY(5px); display: inline-block;">¥500,000</span></td>
-                            </tr>
-                            <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base">データ数</td>
-                                <td class="p-2 sm:p-3 md:p-5 font-bold text-[#7E4BC3] text-sm md:text-base">550万社<br>120万社（求人）</td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base">550万社</td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base">70万社</td>
-                            </tr>
-                            <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base">メール一斉送信</td>
-                                <td class="p-2 sm:p-3 md:p-5"><i data-lucide="check-circle-2" class="w-7 h-7 mx-auto text-green-500"></i></td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +5万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(要別ツール)</span>
-                                    </span>
-                                </td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +5万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(要別ツール)</span>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base">メール開封確認</td>
-                                <td class="p-2 sm:p-3 md:p-5"><i data-lucide="check-circle-2" class="w-7 h-7 mx-auto text-green-500"></i></td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +3万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(オプション)</span>
-                                    </span>
-                                </td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +3万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(オプション)</span>
-                                    </span>
-                                </td>
-                            </tr>
-                             <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base">AIメール文生成</td>
-                                <td class="p-2 sm:p-3 md:p-5"><i data-lucide="check-circle-2" class="w-7 h-7 mx-auto text-green-500"></i></td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +10万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(要別ツール)</span>
-                                    </span>
-                                </td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +10万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(要別ツール)</span>
-                                    </span>
-                                </td>
-                            </tr>
-                             <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base">AI企業リサーチ</td>
-                                <td class="p-2 sm:p-3 md:p-5"><i data-lucide="check-circle-2" class="w-7 h-7 mx-auto text-green-500"></i></td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +10万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(要別ツール)</span>
-                                    </span>
-                                </td>
-                                <td class="p-2 sm:p-3 md:p-5">
-                                    <span class="text-red-500 font-bold text-xs sm:text-sm">
-                                        +10万円/月<br class="sm:hidden">
-                                        <span class="text-gray-500 text-xs">(要別ツール)</span>
-                                    </span>
-                                </td>
-                            </tr>
-                             <tr class="hover:bg-purple-50">
-                                <td class="px-3 pr-0 py-2 sm:px-3 sm:py-3 md:px-5 md:py-5 font-bold text-left text-sm md:text-base">リストのDL</td>
-                                <td class="p-2 sm:p-3 md:p-5 font-bold text-[#7E4BC3] text-sm md:text-base">無制限</td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base">
-                                    有料 /<br class="sm:hidden">件数制限あり
-                                </td>
-                                <td class="p-2 sm:p-3 md:p-5 text-sm md:text-base">
-                                    有料 /<br class="sm:hidden">件数制限あり
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="pricing" class="py-16 lg:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">シンプルな料金プラン</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">必要な機能をすべて、圧倒的なコストパフォーマンスで。初期費用は一切かかりません。</p>
-                </div>
-                <div class="flex justify-center">
-                    <div class="price-card bg-white p-6 md:p-8 rounded-2xl border-2 border-[#AA4CD7] w-full max-w-lg relative">
-                         <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
-                            <span class="gradient-bg text-white text-sm font-bold px-4 py-1 rounded-full">おすすめ</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 text-center">All-in-One Plan</h3>
-                        <p class="text-gray-500 mt-2 text-center">全ての機能を、この一つのプランで。</p>
-                        <p class="my-6 text-center">
-                            <span class="text-3xl lg:text-4xl font-extrabold gradient-text price-animation-target" id="price-100k">¥100,000<span class="text-xl text-gray-600 font-medium">~</span></span>
-                            <span class="text-gray-600 font-medium">/ 月 (税別)</span>
-                        </p>
-                        <p class="text-lg font-bold text-center my-4">初期費用 <span class="text-5xl gradient-text price-animation-target" id="price-0">0</span> 円</p>
-                         <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full text-center font-bold text-white gradient-bg cta-button main px-6 py-4 rounded-lg transition block text-lg sparkle-animation">
-                           30分デモ予約
-                        </a>
-                        <ul class="mt-8 space-y-4 text-left">
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span>企業データベース（550万社）</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span>リアルタイム求人データベース（120万社）</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span>決裁者ダイレクトサーチ</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span>AIメール/リサーチ機能</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span>CSVエクスポート (無制限)</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span>10アカウントまで利用可能</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check" class="w-5 h-5 text-green-500 feature-check-icon"></i><span class="font-bold">専任担当による安心サポート</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="py-16 lg:py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">よくあるご質問</h2>
-                </div>
-                <div class="space-y-6">
-                    <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>最低契約期間はありますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>はい、ご契約は原則として1年（12ヶ月）単位となります。</p>
-                        </div>
-                    </div>
-                     <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>データはどのように更新されますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>求人情報は基本的に毎日、法人情報は月に1〜2回更新されます。公開情報や求人情報を基にデータベースを構築しているため、常に鮮度の高い情報をご提供します。</p>
-                        </div>
-                    </div>
-                     <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>なぜ他社と比較してこんなに安価なのですか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>弊社は他社と異なり、人件費やオフィス費用などを極力抑えることで、低価格での提供を実現しています。ベンチャー企業様でも導入いただきやすいよう、月額コストを抑えています。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>リストのダウンロードに上限はありますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>1回あたりのダウンロード上限は1,000件ですが、ダウンロードの実行回数に上限はありません。ご契約プランの金額内で、ツールは使い放題です。</p>
-                        </div>
-                    </div>
-                     <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>導入後のサポートはありますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>UI・UXを非常に分かりやすく設計しているため、お問い合わせは少ない状況です。ご質問やご不明な点がございましたら、営業担当に直接ご連絡いただけますと幸いです。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>無料トライアルはありますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>データサービスですので、基本的には無料のトライアルはご用意しておりませんが、場合によっては社内用demo環境をご案内も可能です。ご利用の場面を教えてください。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>他社と比べて1番の違いは何ですか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>1番の違いはまず圧倒的な価格です。また求人情報や、AIを活用したリスト抽出機能、一括AP機能、DL上限なしが大きな違いです。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>今後、どのような機能が追加になりますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>今後はAIをさらに活用した機能を追加予定です。</p>
-                        </div>
-                    </div>
-                     <div class="faq-item border-b pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>契約後利用可能になるまでどれくらいの時間がかかりますか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>登録フォームご入力後3営業日で登録が完了いたします。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item pb-4">
-                        <button class="faq-question w-full flex justify-between items-center text-left text-base sm:text-xl font-semibold text-gray-800">
-                            <span>支払いは年払いだけですか？</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 icon"></i>
-                        </button>
-                        <div class="faq-answer hidden mt-4 text-sm sm:text-base text-gray-600 pr-8">
-                            <p>原則年払いのみとなります。月払いの場合は別途ご相談頂けますと幸いです。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-16 lg:py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-3xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">お問い合わせ</h2>
-                    <p class="mt-4 text-gray-600">AIアポブーストに関するご質問やご相談は、お気軽にお問い合わせください。</p>
-                </div>
-                <form id="contact-form" class="bg-white p-8 md:p-12 rounded-xl shadow-lg text-gray-800 border-2 border-purple-100">
-                    <div class="mb-6">
-                        <label for="companyName" class="block text-gray-700 text-sm font-bold mb-2">貴社名 <span class="text-red-500">*</span></label>
-                        <input type="text" id="companyName" name="companyName" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#AA4CD7] focus:border-transparent" placeholder="株式会社AIアポブースト" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">お名前 <span class="text-red-500">*</span></label>
-                        <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#AA4CD7] focus:border-transparent" placeholder="山田 太郎" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
-                        <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#AA4CD7] focus:border-transparent" placeholder="example@aiapoboost.jp" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">電話番号</label>
-                        <input type="tel" id="phone" name="phone" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#AA4CD7] focus:border-transparent" placeholder="000-0000-0000">
-                    </div>
-                    <div class="mb-6">
-                        <label for="inquiryType" class="block text-gray-700 text-sm font-bold mb-2">お問い合わせ種別 <span class="text-red-500">*</span></label>
-                        <select id="inquiryType" name="inquiryType" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#AA4CD7] focus:border-transparent" required>
-                            <option value="">選択してください</option>
-                            <option value="資料請求">資料請求</option>
-                            <option value="無料デモ予約">30分デモ予約</option>
-                            <option value="製品に関する質問">製品に関する質問</option>
-                            <option value="その他">その他</option>
-                        </select>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">お問い合わせ内容</label>
-                        <textarea id="message" name="message" rows="5" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#AA4CD7] focus:border-transparent" placeholder="お問い合わせ内容を詳しくご記入ください。"></textarea>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <button id="submit-button" type="submit" class="w-full text-center font-bold text-white gradient-bg cta-button main px-6 py-4 rounded-lg transition block text-lg">
-                            送信する
-                        </button>
-                    </div>
-                    <div id="form-status" class="mt-4 text-center"></div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="text-white py-12" role="contentinfo" style="background-color: #AA4CD7;">
-        <div class="container mx-auto px-6">
-            <div class="md:flex md:justify-between text-center md:text-left">
-                <div class="footer-brand mb-8 md:mb-0">
-                    <img src="images/logo.png" alt="AIアポブースト フッターロゴ" class="h-10 mb-4 mx-auto md:mx-0">
-                    <p class="text-gray-200 text-sm mb-4">AIが営業をスマートに、成果を最大化。</p>
-                    <p class="text-gray-200 text-sm">
-                        &copy; 2023 AIアポブースト. All rights reserved.<br>
-                        開発元：<a href="https://awake-inc.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">株式会社Awake</a>
-                    </p>
-                </div>
-                <nav class="footer-nav flex justify-center md:justify-end gap-8 sm:gap-16" aria-label="フッターナビゲーション">
-                    <div class="footer-nav-section">
-                        <h4 class="font-bold text-lg mb-4">製品</h4>
-                        <ul class="space-y-2 text-gray-200 text-sm" role="list">
-                            <li><a href="#features" class="hover:text-white transition">機能一覧</a></li>
-                            <li><a href="#comparison" class="hover:text-white transition">他社比較</a></li>
-                            <li><a href="#pricing" class="hover:text-white transition">料金プラン</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-nav-section">
-                        <h4 class="font-bold text-lg mb-4">サポート</h4>
-                        <ul class="space-y-2 text-gray-200 text-sm" role="list">
-                            <li><a href="#faq" class="hover:text-white transition">よくあるご質問</a></li>
-                            <li><a href="#contact" class="hover:text-white transition">お問い合わせ</a></li>
-                            <li><a href="privacy-policy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile CTA Bar -->
-    <div id="mobile-cta-bar" class="mobile-cta-bar fixed bottom-0 left-0 right-0 grid grid-cols-2 gap-2 p-2 lg:hidden z-50 transition-transform duration-500 ease-in-out transform translate-y-full" role="complementary" aria-label="モバイル用CTAボタン">
-        <a href="#contact" class="w-full text-center font-bold text-white gradient-bg cta-button px-4 py-3 rounded-lg sparkle-animation">資料請求</a>
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full text-center font-bold text-white gradient-bg cta-button px-4 py-3 rounded-lg sparkle-animation">30分デモ予約</a>
-    </div>
-
-    <script src="js/scripts.js"></script>
-    <script src="js/form-handler.js"></script>
-
-    <!-- Image Popup Modal -->
-    <div id="image-popup" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="relative max-w-4xl max-h-full p-4">
-            <button id="close-popup" class="absolute top-4 right-4 text-white text-4xl font-bold">&times;</button>
-            <img id="popup-image" src="" alt="拡大画像" class="max-w-full max-h-[90vh] object-contain">
-        </div>
-    </div>
-</body>
+  </body>
 </html>
