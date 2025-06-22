@@ -206,13 +206,33 @@ const App = {
         // Mobile CTA Bar Animation
         const mobileCtaBar = document.getElementById('mobile-cta-bar');
         const heroSection = document.querySelector('main > section:first-of-type');
-        if (mobileCtaBar && heroSection) {
-            const ctaObserver = createObserver((entries) => {
+        const footer = document.querySelector('footer');
+
+        if (mobileCtaBar && heroSection && footer) {
+            let heroIntersecting = false;
+            let footerIntersecting = false;
+
+            const updateCtaVisibility = () => {
+                const shouldHide = heroIntersecting || footerIntersecting;
+                mobileCtaBar.classList.toggle('translate-y-full', shouldHide);
+            };
+
+            const heroObserver = createObserver((entries) => {
                 entries.forEach(entry => {
-                    mobileCtaBar.classList.toggle('translate-y-full', entry.isIntersecting);
+                    heroIntersecting = entry.isIntersecting;
+                    updateCtaVisibility();
                 });
             }, { threshold: 0.1 });
-            ctaObserver.observe(heroSection);
+
+            const footerObserver = createObserver((entries) => {
+                entries.forEach(entry => {
+                    footerIntersecting = entry.isIntersecting;
+                    updateCtaVisibility();
+                });
+            }, { threshold: 0.1 });
+
+            heroObserver.observe(heroSection);
+            footerObserver.observe(footer);
         }
     },
 
