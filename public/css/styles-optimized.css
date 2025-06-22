@@ -470,3 +470,20 @@ body {
         height: 4rem;
     }
 }
+
+@keyframes background-pan-swipe {
+    0% {
+        background-position: 100% center;
+    }
+    100% {
+        background-position: -100% center;
+    }
+}
+
+.animated-gradient-text-swipe {
+    background-image: linear-gradient(to right, #B22EE7, #7E4BC3, #B22EE7);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: background-pan-swipe 3s linear infinite;
+}

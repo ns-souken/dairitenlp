@@ -134,6 +134,20 @@ const App = {
             problemCards.forEach(card => problemCardObserver.observe(card));
         }
 
+        // Swipe Guide Animation
+        const swipeGuide = document.getElementById('swipe-guide');
+        if (swipeGuide) {
+            const swipeObserver = createObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-swipe-text');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.8 });
+            swipeObserver.observe(swipeGuide);
+        }
+
         // Price Card Checkmark Animation
         const priceCardForChecks = document.querySelector('.price-card');
         if (priceCardForChecks) {
