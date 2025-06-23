@@ -487,3 +487,15 @@ body {
     -webkit-text-fill-color: transparent;
     animation: background-pan-swipe 3s linear infinite;
 }
+
+@keyframes bounce-animation {
+    0%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-5px); }
+    40% { transform: translateY(0); }
+    60% { transform: translateY(-2px); }
+    80% { transform: translateY(0); }
+}
+
+.bounce-animation {
+    animation: bounce-animation 1.5s infinite;
+}

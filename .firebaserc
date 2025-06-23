@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "dairitenlp"
-  }
+  },
+  "targets": {
+    "dairitenlp": {
+      "hosting": {
+        "ns-souken": [
+          "ns-souken"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
