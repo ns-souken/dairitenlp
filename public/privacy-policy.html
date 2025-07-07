@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー | AIアポブースト</title>
+    <meta name="description" content="AIアポブーストのプライバシーポリシーです。個人情報の取り扱いについてご説明します。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/styles-optimized.css">
+    <!-- Font optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical font styles inline -->
+    <style>
+        /* Font face declarations for immediate loading */
+        @font-face {
+            font-family: 'Noto Sans JP';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/notosansjp/v52/nKKF-GM_FYFRJvXzVXaAPe97MBmnOSt0qx.woff2') format('woff2');
+            unicode-range: U+3041-3096, U+309D-309F, U+30A1-30FA, U+30FC-30FE, U+4E00-9FAF;
+        }
+        @font-face {
+            font-family: 'Noto Sans JP';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/notosansjp/v52/nKKU-GM_FYFRJvXzVXaAPe9pdP6YydY.woff2') format('woff2');
+            unicode-range: U+3041-3096, U+309D-309F, U+30A1-30FA, U+30FC-30FE, U+4E00-9FAF;
+        }
+        @font-face {
+            font-family: 'Noto Sans JP';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/notosansjp/v52/nKKU-GM_FYFRJvXzVXaAPe9pdP6YydY.woff2') format('woff2');
+            unicode-range: U+3041-3096, U+309D-309F, U+30A1-30FA, U+30FC-30FE, U+4E00-9FAF;
+        }
+        
+        /* Fallback font stack */
+        body {
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+        }
+        
+        /* Prevent layout shift during font load */
+        .font-loading {
+            visibility: hidden;
+        }
+        
+        .fonts-loaded .font-loading {
+            visibility: visible;
+        }
+    </style>
+    
+    <!-- Async load full font stylesheet -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"></noscript>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-40" style="background-color: #AA4CD7;">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="images/logo.png" alt="AIアポブースト ロゴ" class="h-10">
+            </a>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="index.html#features" class="text-white hover:text-gray-200 transition">機能</a>
+                <a href="index.html#comparison" class="text-white hover:text-gray-200 transition">他社比較</a>
+                <a href="index.html#pricing" class="text-white hover:text-gray-200 transition">料金</a>
+                <a href="index.html#faq" class="text-white hover:text-gray-200 transition">FAQ</a>
+            </nav>
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="index.html#contact" class="text-sm font-bold text-white gradient-bg cta-button px-6 py-3 rounded-lg transition sparkle-animation">資料請求</a>
+                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="text-sm font-bold text-white gradient-bg cta-button px-6 py-3 rounded-lg transition sparkle-animation">30分デモ予約</a>
+            </div>
+            <button id="mobile-menu-button" class="lg:hidden relative z-50 h-8 w-8 text-white focus:outline-none" aria-label="メニューを開く" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">メニューを開閉する</span>
+                <span class="block absolute h-0.5 w-full bg-current transform transition duration-500 ease-in-out top-1.5"></span>
+                <span class="block absolute h-0.5 w-full bg-current transform transition duration-500 ease-in-out"></span>
+                <span class="block absolute h-0.5 w-full bg-current transform transition duration-500 ease-in-out bottom-1.5"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-purple-400" style="background-color: #AA4CD7;">
+            <div class="px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html#features" class="text-white hover:text-gray-200 transition">機能</a>
+                <a href="index.html#comparison" class="text-white hover:text-gray-200 transition">他社比較</a>
+                <a href="index.html#pricing" class="text-white hover:text-gray-200 transition">料金</a>
+                <a href="index.html#faq" class="text-white hover:text-gray-200 transition">FAQ</a>
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="index.html#contact" class="w-full text-center font-bold text-white gradient-bg cta-button px-4 py-2 rounded-lg sparkle-animation">資料請求</a>
+                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full text-center font-bold text-white gradient-bg cta-button px-4 py-2 rounded-lg sparkle-animation">30分デモ予約</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl bg-white p-8 md:p-12 rounded-xl shadow-lg">
+            <h1 class="text-3xl lg:text-4xl font-bold text-gray-800 text-center mb-12">プライバシーポリシー</h1>
+            
+            <div class="prose max-w-none text-gray-700">
+                <p class="mb-4">本プライバシーポリシーは、AIアポブースト（以下「当サービス」といいます）が提供するウェブサイトおよびサービスにおける、お客様の個人情報の取り扱いについて定めるものです。</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">1. 収集する個人情報</h2>
+                <p class="mb-4">当サービスでは、お客様がサービスを利用される際に、以下の情報を収集することがあります。</p>
+                <ul class="list-disc list-inside ml-4 mb-4 space-y-2">
+                    <li>氏名、会社名、部署名、役職</li>
+                    <li>メールアドレス、電話番号</li>
+                    <li>お問い合わせ内容</li>
+                    <li>サービス利用状況に関する情報（アクセスログ、IPアドレス、ブラウザ情報など）</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">2. 個人情報の利用目的</h2>
+                <p class="mb-4">収集した個人情報は、以下の目的で利用いたします。</p>
+                <ul class="list-disc list-inside ml-4 mb-4 space-y-2">
+                    <li>当サービスの提供、運営、維持のため</li>
+                    <li>お客様からのお問い合わせに対応するため</li>
+                    <li>当サービスの新機能、更新情報、キャンペーン等のご案内をするため</li>
+                    <li>当サービスの改善、新サービスの開発、およびマーケティング活動のため</li>
+                    <li>利用規約に違反する行為を防止するため</li>
+                    <li>上記の利用目的に付随する目的</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">3. 個人情報の第三者提供</h2>
+                <p class="mb-4">当サービスは、法令に基づく場合を除き、お客様の同意を得ることなく個人情報を第三者に提供することはありません。</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">4. 個人情報の安全管理</h2>
+                <p class="mb-4">当サービスは、個人情報の漏洩、紛失、破壊、改ざん等を防止するため、適切な安全管理措置を講じます。</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">5. クッキー（Cookie）について</h2>
+                <p class="mb-4">当サービスでは、サービスの向上およびお客様の利便性向上のためにクッキーを使用することがあります。クッキーにより個人を特定することはありません。</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">6. 個人情報の開示・訂正・利用停止等</h2>
+                <p class="mb-4">お客様は、ご自身の個人情報について、開示、訂正、利用停止等の請求をすることができます。ご請求があった場合は、本人確認を行った上で、合理的な範囲で速やかに対応いたします。</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">7. プライバシーポリシーの変更</h2>
+                <p class="mb-4">当サービスは、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、本ウェブサイトに掲載された時点から効力を生じるものとします。</p>
+
+                <h2 class="text-2xl font-bold mt-8 mb-4">8. お問い合わせ窓口</h2>
+                <p class="mb-4">本プライバシーポリシーに関するお問い合わせは、下記までご連絡ください。</p>
+                <p class="mb-4">AIアポブースト 正規代理店<br>メールアドレス：<a href="mailto:kaito.nishimura@ns-souken.com" class="text-[#7E4BC3] hover:text-[#B22EE7] transition">kaito.nishimura@ns-souken.com</a></p>
+
+                <p class="text-right text-sm text-gray-500 mt-12">最終更新日：2025年6月17日</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white py-12" role="contentinfo" style="background-color: #AA4CD7;">
+        <div class="container mx-auto px-6">
+            <div class="md:flex md:justify-between text-center md:text-left">
+                <div class="footer-brand mb-8 md:mb-0">
+                    <img src="images/logo.png" alt="AIアポブースト フッターロゴ" class="h-10 mb-4 mx-auto md:mx-0">
+                    <p class="text-gray-200 text-sm mb-4">AIが営業をスマートに、成果を最大化。</p>
+                    <p class="text-gray-200 text-sm">
+                        &copy; 2023 AIアポブースト. All rights reserved.<br>
+                        開発元：<a href="https://awake-inc.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">株式会社Awake</a>
+                    </p>
+                </div>
+                <nav class="footer-nav flex justify-center md:justify-end gap-8 sm:gap-16" aria-label="フッターナビゲーション">
+                    <div class="footer-nav-section">
+                        <h4 class="font-bold text-lg mb-4">製品</h4>
+                        <ul class="space-y-2 text-gray-200 text-sm" role="list">
+                            <li><a href="index.html#features" class="hover:text-white transition">機能一覧</a></li>
+                            <li><a href="index.html#comparison" class="hover:text-white transition">他社比較</a></li>
+                            <li><a href="index.html#pricing" class="hover:text-white transition">料金プラン</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-section">
+                        <h4 class="font-bold text-lg mb-4">サポート</h4>
+                        <ul class="space-y-2 text-gray-200 text-sm" role="list">
+                            <li><a href="index.html#faq" class="hover:text-white transition">よくあるご質問</a></li>
+                            <li><a href="index.html#contact" class="hover:text-white transition">お問い合わせ</a></li>
+                            <li><a href="privacy-policy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/form-handler.js"></script>
+
+</body>
+</html>
