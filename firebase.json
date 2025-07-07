@@ -1,0 +1,13 @@
+{
+    "hosting": [
+      {
+        "site": "ns-souken",
+        "public": "public",
+        "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+        ]
+      }
+    ]
+  }
