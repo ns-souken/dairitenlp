@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <title>AIアポブースト | AIで営業をスマートに、成果を最大化</title>
     <meta name="description" content="AIアポブーストは、550万社以上の企業データベースとAI分析で、B2B営業の成果を劇的に向上させる次世代型セールスツールです。今なら初期費用0円、月額10万円から。">
     
@@ -60,6 +64,16 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"></noscript>
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ94NW6MM0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VQ94NW6MM0');
+</script>
     
     <!-- Google Calendar Appointment Scheduling -->
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
@@ -120,6 +134,10 @@
         <section class="relative bg-white pt-20 pb-24 lg:pt-32 lg:pb-36 text-center overflow-hidden">
              <div class="absolute inset-0 hero-gradient-animated opacity-10"></div>
              <div class="hero-section-overlay"></div>
+             <!-- GIF background for title section -->
+             <div id="hero-background-gif" class="absolute inset-0 z-0 opacity-10">
+                <img id="hero-gif" src="images/DB.gif" class="w-full h-full object-cover" alt="">
+             </div>
             <div class="container mx-auto px-6 relative z-10">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-800 leading-tight">
                     <span class="block fade-in-left">営業をもっと、</span>
@@ -132,6 +150,9 @@
                     ターゲット選定からアプローチまでを自動化<br>
                     あなたのチームを『売れる組織』へと変革
                 </p>
+                <a href="#comparison" class="mt-8 text-lg text-[#AA4CD7] border-b-2 border-[#AA4CD7] inline-block transition fade-in-up" style="animation-delay: 2.4s;">
+                    AIアポブーストが選ばれる理由
+                </a>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 fade-in-up" style="animation-delay: 1.6s;">
                     <a href="#contact" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-4 py-2 rounded-lg flex items-center justify-center gap-2 sparkle-animation">
                         <i data-lucide="file-text" class="w-5 h-5 sm:w-6 sm:h-6"></i>
@@ -142,51 +163,50 @@
                         30分デモ予約
                     </a>
                 </div>
-                <p class="mt-8 text-sm text-gray-500 fade-in-up" style="animation-delay: 2.4s;">初期費用0円・12ヶ月契約</p>
                 
                 <!-- Marquee Section -->
                 <div class="mt-16 marquee-container overflow-hidden relative w-full cursor-grab fade-in-up" style="animation-delay: 3.4s;">
                     <div class="marquee-content flex gap-8">
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
                             <i data-lucide="database" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">550万社 企業データ</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">550万社 企業データ</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
                             <i data-lucide="trending-up" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">120万社 リアルタイム求人データ</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">120万社 リアルタイム求人データ</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
                             <i data-lucide="target" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">決裁者 ダイレクトサーチ</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">決裁者 ダイレクトサーチ</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
                             <i data-lucide="mail-check" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI パーソナライズドメール</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">AI パーソナライズドメール</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg">
                             <i data-lucide="brain-circuit" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI 企業分析</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">AI 企業分析</h3>
                         </a>
                         <!-- Duplicate for seamless loop -->
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
                             <i data-lucide="database" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">550万社 企業データ</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">550万社 企業データ</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
                             <i data-lucide="trending-up" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">120万社 リアルタイム求人データ</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">120万社 リアルタイム求人データ</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
                             <i data-lucide="target" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">決裁者 ダイレクトサーチ</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">決裁者 ダイレクトサーチ</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
                             <i data-lucide="mail-check" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI パーソナライズドメール</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">AI パーソナライズドメール</h3>
                         </a>
                         <a href="#solution-section" class="marquee-item flex-shrink-0 w-auto flex items-center justify-center bg-transparent p-4 rounded-lg" aria-hidden="true">
                             <i data-lucide="brain-circuit" class="w-8 h-8 text-[#AA4CD7] mr-4"></i>
-                            <h3 class="font-bold text-base gradient-text whitespace-nowrap">AI 企業分析</h3>
+                            <h3 class="font-bold text-base gradient-text whitespace-nowrap leading-tight pt-1">AI 企業分析</h3>
                         </a>
                     </div>
                 </div>
@@ -222,10 +242,54 @@
                     <h2 class="mt-8 text-3xl lg:text-4xl font-bold text-gray-800">
                         <span class="gradient-text">その全てを解決</span>
                     </h2>
+                    <div id="solution-gif-container" class="mt-8 mx-auto max-w-full md:max-w-4xl h-auto">
+                        <img id="solution-gif" src="images/DB.gif" class="w-full h-full object-cover rounded-lg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
-
+        
+        <section class="py-12 lg:py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800"><span class="gradient-text">数字でわかる</span>効果</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">AIアポブーストがもたらす、圧倒的なパフォーマンス向上。</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
+                        <p class="text-lg text-gray-600">メール・電話・HPの有効性</p>
+                        <p class="gradient-text text-6xl lg:text-7xl my-2 counter-value" data-target="95">0</p>
+                        <p class="text-2xl font-bold text-gray-800">%以上</p>
+                        <p class="font-bold text-xl mt-2">高いデータ精度</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
+                        <p class="text-lg text-gray-600">リスト作成・リサーチ</p>
+                        <p class="gradient-text text-6xl lg:text-7xl my-2"><span class="font-black">1</span><span class="text-4xl text-gray-800">/</span><span class="counter-value" data-target="10">0</span></p>
+                        <p class="text-2xl font-bold text-gray-800">に</p>
+                        <p class="font-bold text-xl mt-2">作業工数を圧縮</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
+                        <p class="text-lg text-gray-600">日次データ更新数</p>
+                        <p class="gradient-text text-6xl lg:text-7xl my-2"><span class="counter-value" data-target="100">0</span><span class="text-4xl">万</span></p>
+                        <p class="text-2xl font-bold text-gray-800">件以上</p>
+                        <p class="font-bold text-xl mt-2">常に最新の情報</p>
+                    </div>
+                </div>
+                 <div class="mt-24 text-center">
+                    <p class="text-gray-800 font-bold text-lg sm:text-xl mb-4">お気軽にお問い合わせください</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-6 py-3 sm:px-8 sm:py-4 rounded-lg inline-flex items-center justify-center gap-2 sparkle-animation">
+                            <i data-lucide="calendar-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            30分デモ予約
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-6 py-3 sm:px-8 sm:py-4 rounded-lg inline-flex items-center justify-center gap-2 sparkle-animation">
+                            <i data-lucide="file-text" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            資料請求はこちら
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="features" class="py-16 lg:py-24 bg-white">
             <div class="container mx-auto px-6">
@@ -233,7 +297,11 @@
                     <p class="text-[#7E4BC3] font-bold">AI POWERED SALES</p>
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mt-2">成果に直結する、AI営業のコア機能</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-gray-600">アポ獲得率を最大化するために設計された、独自の機能群をご覧ください。</p>
+                    <div class="mt-8 mx-auto max-w-full md:max-w-4xl h-auto">
+                        <img src="images/AI.gif" class="w-full h-full object-cover rounded-lg" alt="">
+                    </div>
                 </div>
+
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div id="feature-database" class="feature-card bg-white p-6 md:p-8 rounded-2xl border">
@@ -282,47 +350,15 @@
             </div>
         </section>
         
-        <section class="py-16 lg:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800"><span class="gradient-text">数字でわかる</span>効果</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">AIアポブーストがもたらす、圧倒的なパフォーマンス向上。</p>
-                    <img id="pc-image" src="images/PC.svg" alt="AIアポブースト ダッシュボード" class="mt-8 mx-auto max-w-full md:max-w-3xl h-auto fade-in-up cursor-pointer" style="animation-delay: 0.5s;">
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
-                        <p class="text-lg text-gray-600">メール・電話・HPの有効性</p>
-                        <p class="gradient-text text-6xl lg:text-7xl my-2 counter-value" data-target="95">0</p>
-                        <p class="text-2xl font-bold text-gray-800">%以上</p>
-                        <p class="font-bold text-xl mt-2">高いデータ精度</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
-                        <p class="text-lg text-gray-600">リスト作成・リサーチ</p>
-                        <p class="gradient-text text-6xl lg:text-7xl my-2"><span class="font-black">1</span><span class="text-4xl text-gray-800">/</span><span class="counter-value" data-target="10">0</span></p>
-                        <p class="text-2xl font-bold text-gray-800">に</p>
-                        <p class="font-bold text-xl mt-2">作業工数を圧縮</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-lg counter-visual-effect">
-                        <p class="text-lg text-gray-600">日次データ更新数</p>
-                        <p class="gradient-text text-6xl lg:text-7xl my-2"><span class="counter-value" data-target="100">0</span><span class="text-4xl">万</span></p>
-                        <p class="text-2xl font-bold text-gray-800">件以上</p>
-                        <p class="font-bold text-xl mt-2">常に最新の情報</p>
-                    </div>
-                </div>
-                 <div class="mt-12 text-center">
-                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00sxXxtwoe7USs2US-J9poTAmWahNf3rHeDzQRZwzF2U8fX_MDV82RzIfsfNdadHyHr2HeV8Qc?gv=true" class="w-full sm:w-auto text-base sm:text-lg font-bold text-white gradient-bg cta-button main px-6 py-3 sm:px-8 sm:py-4 rounded-lg inline-flex items-center gap-2 sparkle-animation">
-                        <i data-lucide="trending-up" class="w-5 h-5 sm:w-6 sm:h-6"></i>
-                        30分デモ予約
-                    </a>
-                </div>
-            </div>
-        </section>
 
         <section id="comparison" class="py-16 lg:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800"><span class="gradient-text">選ばれる理由</span></h2>
                     <p class="mt-4 max-w-3xl mx-auto text-gray-600">高機能・高品質は当たり前。<br>圧倒的なコストパフォーマンスと、営業成果にコミットする機能性で選ばれています。</p>
+                </div>
+                <div id="swipe-guide" class="md:hidden text-center text-sm text-gray-800 font-bold mb-4">
+                    <span class="animated-gradient-text-swipe">スワイプで他社比較</span>
                 </div>
                 <div class="comparison-table overflow-x-auto bg-white rounded-2xl border">
                     <table class="w-full min-w-[700px] text-center">
